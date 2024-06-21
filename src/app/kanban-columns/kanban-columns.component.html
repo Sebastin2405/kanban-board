@@ -1,0 +1,15 @@
+<div class="column-box w-100" cdkDropList [cdkDropListData]="getTasksByStatus(column)" (cdkDropListDropped)="drop($event)">
+    <div class="d-flex align-items-center justify-content-between mb-2 p-2" [ngClass]="{
+        'column-header-todo': column === 'To Do',
+        'column-header-inprogress': column === 'In Progress',
+        'column-header-done': column === 'Done',
+        'column-header-testing': column === 'Testing',
+        'column-header-deployed': column === 'Deployed'
+    }">
+        <h6 class="text-center mb-0">{{ column }}</h6>
+        <button mat-icon-button *ngIf="column === 'To Do'" (click)="addTask()"><i class="fa-solid fa-plus font-icon-style"></i></button>
+    </div>
+    <div class="p-2">
+        <app-kanban-taskcards *ngFor="let task of getTasksByStatus(column)" [task]="task" (edit)="updateTask($event)" (delete)="deleteTask($event)" cdkDrag></app-kanban-taskcards>
+    </div>
+</div>

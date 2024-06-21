@@ -1,0 +1,16 @@
+<div class="task-card">
+    <h6>{{ task.title }}</h6>
+    <p class="mb-0">{{ task.description }}</p>
+    <div class="d-flex align-items-center justify-content-between">
+        <p class="mb-0">{{ task.dueDate | date:'mediumDate' }}</p>
+        <p class="mb-0" [ngClass]="{
+            'low-priority': task.priority === 'low',
+            'medium-priority': task.priority === 'medium',
+            'high-priority': task.priority === 'high'
+          }">{{ task.priority }}</p>
+    </div>
+    <div>
+        <button mat-icon-button (click)="onEdit()"><i class="fa-solid fa-pen-to-square font-icon-style"></i></button>
+        <button mat-icon-button (click)="onDelete()"><i class="fa-solid fa-trash font-icon-style"></i></button>
+    </div>
+</div>

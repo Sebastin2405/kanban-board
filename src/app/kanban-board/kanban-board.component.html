@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-between align-items-center px-5 py-3">
+            <h4 class="text-center mb-0">Kanban Board</h4>
+            <button mat-button (click)="logout()">Logout</button>
+        </div>
+        <div class="col-md-12 d-none">
+            <mat-form-field appearance="outline" class="px-3">
+                <mat-label>Sort</mat-label>
+                <mat-select [(value)]="selectedPriority" (selectionChange)="sortTasks()">
+                    <mat-option value="low">Low</mat-option>
+                    <mat-option value="medium">Medium</mat-option>
+                    <mat-option value="high">High</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-12">
+            <div class="kanban-board">
+                <div cdkDropListGroup class="d-flex justify-content-between w-100 mobile-screen">
+                    <app-kanban-columns class="column" *ngFor="let column of columns" [column]="column" [tasks]="getTasksByStatus(column)" (taskDropped)="handleTaskDrop($event)"></app-kanban-columns>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.column-header-todo {
+    color: #ffffff; 
+    background-color: #ff6347; 
+    height: 50px;
+}
+.column-header-inprogress {
+    color: #ffffff;
+    background-color: #4682b4; 
+    height: 50px;
+}
+.column-header-done {
+    color: #ffffff;
+    background-color: #32cd32;
+    height: 50px;
+}
+.column-header-testing {
+    color: #ffffff; 
+    background-color: #ffa500;
+    height: 50px;
+}
+.column-header-deployed {
+    color: #ffffff; 
+    background-color: #6a5acd;
+    height: 50px;
+}

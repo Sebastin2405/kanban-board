@@ -1,0 +1,15 @@
+.low-priority {
+    background-color: #71ff84;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.medium-priority {
+    background-color: #ffc646;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.high-priority {
+    background-color: #ff4747;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

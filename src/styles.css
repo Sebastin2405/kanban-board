@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.bg-maincolor {
+    background-color: #f0f1f3;
+}
+.login-form {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 34px -15px #0000003d;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.column {
+    background: #f0f0f0;
+    border-radius: 5px;
+    /* padding: 10px; */
+    width: 18%;    
+}
+.column-box{
+    min-height: calc(100vh - 150px);
+}
+.task-card {
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.task-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.font-icon-style{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .mobile-screen{
+        flex-direction: column;
+    }
+  }
